@@ -53,23 +53,23 @@ bot = Client(
     api_hash=api_hash,
     bot_token=bot_token)
 
-#@bot.on_message(filters.command(["start"]))
-#async def start(bot, message):
-  #random_image_url = random.choice(image_list)
+@bot.on_message(filters.command(["start"]))
+async def start(bot, message):
+  random_image_url = random.choice(image_list)
 
-  #keyboard = [
-    #[
+  keyboard = [
+    [
       #InlineKeyboardButton("🚀 ᴘᴡ ᴡɪᴛʜᴏᴜᴛ ᴘᴜʀᴄʜᴀsᴇ 🚀", callback_data="pwwp")
-    #]
-  #]
+    ]
+  ]
 
-  #reply_markup = InlineKeyboardMarkup(keyboard)
-  #await message.reply_photo(
-    #photo=random_image_url,
-    #caption="☆ ɪ ᴀᴍ ᴛxᴛ ᴇxᴛʀᴀᴄᴛᴏʀ ʙᴏᴛ.\n\n☆ ʙᴏᴛ ᴍᴀᴅᴇ ʙʏ ᴛᴜsʜᴀʀ.\n\n☆ ᴘʟᴇᴀsᴇ ᴘʀᴇss ᴅᴏᴡɴ.",
-    #quote=True,
-    #reply_markup=reply_markup
-#)
+  reply_markup = InlineKeyboardMarkup(keyboard)
+  await message.reply_photo(
+    photo=random_image_url,
+    caption="☆ ɪ ᴀᴍ ᴛxᴛ ᴇxᴛʀᴀᴄᴛᴏʀ ʙᴏᴛ.\n\n☆ ʙᴏᴛ ᴍᴀᴅᴇ ʙʏ ᴛᴜsʜᴀʀ.\n\n☆ ᴘʟᴇᴀsᴇ ᴘʀᴇss ᴅᴏᴡɴ.",
+    quote=True,
+    reply_markup=reply_markup
+)
 
 
 # Inline keyboard for start command
@@ -126,11 +126,11 @@ async def start_command(bot: Client, message: Message):
  
  
 @bot.on_message(group=2)
-#async def account_login(bot: Client, m: Message):
-#    try:
-#        await bot.forward_messages(chat_id=chat_id, from_chat_id=m.chat.id, message_ids=m.id)
-#    except:
-#        pass
+async def account_login(bot: Client, m: Message):
+    try:
+      await bot.forward_messages(chat_id=chat_id, from_chat_id=m.chat.id, message_ids=m.id)
+    except:
+       pass
         
 async def fetch_pwwp_data(session: aiohttp.ClientSession, url: str, headers: Dict = None, params: Dict = None, data: Dict = None, method: str = 'GET') -> Any:
     max_retries = 3
@@ -164,12 +164,12 @@ async def process_pwwp_chapter_content(session: aiohttp.ClientSession, chapter_i
             if video_details:
                 name = data_item.get('topic', '')
                 videoUrl = video_details.get('videoUrl') or video_details.get('embedCode') or ""
-            #    image = video_details.get('image', "")
+                image = video_details.get('image', "")
 
                 if videoUrl:
                     line = f"{name}:{videoUrl}"
                     content.append(line)
-               #     logging.info(line)
+                    logging.info(line)
 
         elif content_type in ("notes", "DppNotes"):
             homework_ids = data_item.get('homeworkIds', [])
@@ -181,7 +181,7 @@ async def process_pwwp_chapter_content(session: aiohttp.ClientSession, chapter_i
                     if url:
                         line = f"{name}:{url}"
                         content.append(line)
-                    #    logging.info(line)
+                       logging.info(line)
 
         return {content_type: content} if content else {}
     else:
