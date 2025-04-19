@@ -333,6 +333,7 @@ async def process_pwwp(bot: Client, m: Message, user_id: int, bot_link: str):
         'client-type': 'WEB',
         'content-type': 'application/json; charset=utf-8',
     }
+     
 
     loop = asyncio.get_event_loop()    
     CONNECTOR = aiohttp.TCPConnector(limit=1000, loop=loop)
