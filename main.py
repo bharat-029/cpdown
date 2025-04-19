@@ -320,12 +320,8 @@ async def pwwp_callback(bot, callback_query):
 
 async def process_pwwp(bot: Client, m: Message, user_id: int, bot_link: str):
 
-    editable = await m.reply_text("**Enter Woking Access Token\n\nOR\n\nEnter Phone Number**")
-
-    try:
-        input1 = await bot.listen(chat_id=m.chat.id, filters=filters.user(user_id), timeout=220)
-        raw_text1 = input1.text
-        await input1.delete(True)
+    
+        raw_text1 = ("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NDU2NzIzMjkuNDQ1LCJkYXRhIjp7Il9pZCI6IjY1NzY4MGFiYWMxYmVkMDAxOGVhN2FjNSIsInVzZXJuYW1lIjoiODg1MTk1MDE5NyIsImZpcnN0TmFtZSI6IkFuc2hpdCIsImxhc3ROYW1lIjoiU2luZ2giLCJvcmdhbml6YXRpb24iOnsiX2lkIjoiNWViMzkzZWU5NWZhYjc0NjhhNzlkMTg5Iiwid2Vic2l0ZSI6InBoeXNpY3N3YWxsYWguY29tIiwibmFtZSI6IlBoeXNpY3N3YWxsYWgifSwicm9sZXMiOlsiNWIyN2JkOTY1ODQyZjk1MGE3NzhjNmVmIl0sImNvdW50cnlHcm91cCI6IklOIiwidHlwZSI6IlVTRVIifSwiaWF0IjoxNzQ1MDY3NTI5fQ.ICskFElSKuwF9rYGDvi99eXZhw5-SKvx4tWDONlFZjE")
     
 
     headers = {
