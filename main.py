@@ -325,12 +325,10 @@ async def process_pwwp(bot: Client, m: Message, user_id: int, bot_link: str):
     editable = await m.reply_text("**Enter Woking Access Token\n\nOR\n\nEnter Phone Number**")
 
     try:
-        input1 = await bot.listen(chat_id=m.chat.id, filters=filters.user(user_id), timeout=120)
+        input1 = await bot.listen(chat_id=m.chat.id, filters=filters.user(user_id), timeout=220)
         raw_text1 = input1.text
         await input1.delete(True)
-    except:
-        await editable.edit("**Timeout! You took too long to respond**")
-        return
+    
 
     headers = {
         'Host': 'api.penpencil.co',
