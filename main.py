@@ -76,9 +76,9 @@ bot = Client(
 keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("𝐎𝐖𝐍𝐄𝐑🗿" ,url=f"https://t.me/Thebhumihar") ],
+                    InlineKeyboardButton("𝐎𝐖𝐍𝐄𝐑🗿" ,"@Courselelohelp_bot") ],
                     [
-                    InlineKeyboardButton("🔔𝐔𝐏𝐃𝐀𝐓𝐄 𝐂𝐇𝐀𝐍𝐍𝐄𝐋🔔" ,url="https://t.me/BHUMIHAR_BOTSS") ],
+                    InlineKeyboardButton("🔔𝐔𝐏𝐃𝐀𝐓𝐄 𝐂𝐇𝐀𝐍𝐍𝐄𝐋🔔" ,url="https://t.me/+vzhqb2RVeTcyMTNl") ],
                     [
                     InlineKeyboardButton("🚀ᴘᴡ ᴡɪᴛʜᴏᴜᴛ ᴘᴜʀᴄʜᴀsᴇ🚀", callback_data="pwwp")                              
                 ],           
@@ -112,9 +112,9 @@ random_image_url = random.choice(image_urls)
 # Caption for the image
 caption = (
         "**𝐇𝐞𝐥𝐥𝐨 𝐃𝐞𝐚𝐫 👋!**\n\n"
-        "➠ **𝐈 𝐚𝐦 𝐚 𝐓𝐞𝐱𝐭 𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐨𝐫 𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐛𝐲 𝗕𝗛𝗨𝗠𝗜𝗛𝗔𝗥**\n"
+        "➠ **𝐈 𝐚𝐦 𝐚 𝐓𝐞𝐱𝐭 𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐨𝐫 𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐛𝐲 bharat **\n"
         "➠ ** 𝐈 𝐂𝐚𝐧 𝐄𝐱𝐭𝐫𝐚𝐜𝐭 𝐓𝐱𝐭 𝐅𝐢𝐥𝐞 𝐎𝐟 𝐏𝐖 𝐁𝐚𝐭𝐜𝐡𝐞𝐬**\n\n"
-        "➠ **𝐌𝐚𝐝𝐞 𝐁𝐲:** 🇧 🇭 🇺 🇲 🇮 🇭 🇦 🇷 "
+        "➠ **𝐌𝐚𝐝𝐞 𝐁𝐲:** @Courselelohelp_bot"
 )
     
 # Start command handler
@@ -316,7 +316,7 @@ async def pwwp_callback(bot, callback_query):
         await bot.send_message(callback_query.message.chat.id, f"**𝐘𝐎𝐔 𝐀𝐑𝐄 𝐍𝐎𝐓 𝐏𝐑𝐄𝐌𝐈𝐔𝐌 𝐔𝐒𝐄𝐑 \n 𝐅𝐎𝐑 𝐏𝐑𝐄𝐌𝐈𝐔𝐌 𝐂𝐎𝐍𝐓𝐀𝐂𝐓 𝐓𝐎 𝐁𝐎𝐓 𝐎𝐖𝐍𝐄𝐑.**")
         return
         
-    THREADPOOL.submit(asyncio.run, process_pwwp(bot, callback_query.message, user_id, "http://t.me/Bhumihar_PWEXT_bot"))
+    THREADPOOL.submit(asyncio.run, process_pwwp(bot, callback_query.message, user_id, "https://t.me/+vzhqb2RVeTcyMTNl"))
 
 async def process_pwwp(bot: Client, m: Message, user_id: int, bot_link: str):
 
@@ -513,7 +513,7 @@ async def process_pwwp(bot: Client, m: Message, user_id: int, bot_link: str):
                     await editable.delete(True)
                                 
                          
-                    caption = f"**Batch Name : ```\n{selected_batch_name}``````\nTime Taken : {formatted_time}``````\nExtracted By : 𝗕𝗛𝗨𝗠𝗜𝗛𝗔𝗥```**"
+                    caption = f"**Batch Name : ```\n{selected_batch_name}``````\nTime Taken : {formatted_time}``````\nExtracted By : @Courselelohelp_bot ```**"
                                 
                     files = [f"{clean_file_name}.{ext}" for ext in ["txt", "zip", "json"]]
                     for file in files:
