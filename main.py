@@ -322,18 +322,7 @@ async def process_pwwp(bot: Client, m: Message, user_id: int, bot_link: str):
 
     
         raw_text1 = ("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NDU2NzIzMjkuNDQ1LCJkYXRhIjp7Il9pZCI6IjY1NzY4MGFiYWMxYmVkMDAxOGVhN2FjNSIsInVzZXJuYW1lIjoiODg1MTk1MDE5NyIsImZpcnN0TmFtZSI6IkFuc2hpdCIsImxhc3ROYW1lIjoiU2luZ2giLCJvcmdhbml6YXRpb24iOnsiX2lkIjoiNWViMzkzZWU5NWZhYjc0NjhhNzlkMTg5Iiwid2Vic2l0ZSI6InBoeXNpY3N3YWxsYWguY29tIiwibmFtZSI6IlBoeXNpY3N3YWxsYWgifSwicm9sZXMiOlsiNWIyN2JkOTY1ODQyZjk1MGE3NzhjNmVmIl0sImNvdW50cnlHcm91cCI6IklOIiwidHlwZSI6IlVTRVIifSwiaWF0IjoxNzQ1MDY3NTI5fQ.ICskFElSKuwF9rYGDvi99eXZhw5-SKvx4tWDONlFZjE")
-    
 
-    
-        'Host': 'api.penpencil.co',
-        'client-id': '5eb393ee95fab7468a79d189',
-        'client-version': '1910',
-        'user-agent': 'Mozilla/5.0 (Linux; Android 12; M2101K6P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Mobile Safari/537.36',
-        'randomid': '72012511-256c-4e1c-b4c7-29d67136af37',
-        'client-type': 'WEB',
-        'content-type': 'application/json; charset=utf-8',
-    
-     
 
     loop = asyncio.get_event_loop()    
     CONNECTOR = aiohttp.TCPConnector(limit=1000, loop=loop)
